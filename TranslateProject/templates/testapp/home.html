@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load crispy_forms_tags%}
+{% block body_block1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+    <form method="post">
+        {{form | crispy}}
+        {% csrf_token %}
+        <input type="submit" value="Translate" class="btn btn-primary">
+    </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block body_block2 %}
+<div class="container">
+    <div class="jumbotron">
+        <h4>{{text}}</h4>
+        <hr> <h4>{{result}}</h4>
+    </div>
+</div>
+{% endblock %}

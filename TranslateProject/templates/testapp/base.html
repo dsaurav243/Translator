@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1>Translator</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+          {% block body_block1 %}
+          {% endblock %}
+        </div>
+
+        <div class="col-sm-6">
+          {% block body_block2 %}
+          {% endblock %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
